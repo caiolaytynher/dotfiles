@@ -1,0 +1,121 @@
+{
+  "layer": "top", // Waybar at top layer
+  // "position": "bottom", // Waybar position (top|bottom|left|right)
+  "height": 30, // Waybar height (to be removed for auto height)
+  // "width": 1280, // Waybar width
+  "spacing": 4, // Gaps between modules (4px)
+  // Choose the order of the modules
+  "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "custom/notification",
+    "group/sysinfo",
+    "group/connectivity",
+    "tray"
+  ],
+  // Groups
+  "group/connectivity": {
+    "orientation": "horizontal",
+    "modules": ["network", "bluetooth"]
+  },
+  "group/sysinfo": {
+    "orientation": "horizontal",
+    "modules": ["pulseaudio", "backlight", "battery"]
+  },
+  // Modules configuration
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{} {icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲", // an empty format will hide the module
+    "format-connected": "{num_connections} ",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 20,
+    "icon-theme": "Papirus",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "on-click-right": "minimize" // Not implemented in hyprland
+  },
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{name}"
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 10,
+    "show-passive-items": true
+  },
+  "clock": {
+    "format": "{:%d de %b, %H:%M}",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": ["󱩎", "󱩏", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖", "󰛨"]
+  },
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "network": {
+    "format-wifi": "",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{essid} ({signalStrength}%) {gwaddr}",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "󱚵", // TODO: change that
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  }
+}

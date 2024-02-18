@@ -1,0 +1,94 @@
+configuration {
+  display-drun: " ";
+  drun-display-format: "{icon} {name}";
+  font: "JetBrainsMono NF Bold 15";
+  modi: "run,drun";
+  show-icons: true;
+}
+
+@theme "/dev/null"
+
+* {
+  bg: #1e2127;
+  bg-light: #272B31;
+  bg-lighter: #30343A;
+  fg: #abb2bf;
+  accent: #e06c75;
+
+  background-color: @bg;
+  text-color: @fg;
+
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  border-radius: 10;
+  padding: 10;
+  border: 2;
+  border-color: @bg-lighter;
+  width: 30%;
+}
+
+element {
+  padding: 10;
+  margin: 5 0 0 0;
+  border-radius: 10;
+}
+
+element selected {
+  border: 2;
+  border-color: @bg-lighter;
+  background-color: @bg-light;
+}
+
+element-text {
+  vertical-align: 0.5;
+}
+
+element-text selected {
+  text-color: @accent;
+  background-color: @bg-light;
+}
+
+element-icon {
+  size: 40;
+}
+
+element-icon selected {
+  background-color: @bg-light;
+}
+
+entry {
+  background-color: @bg-light;
+  border: 2;
+  border-color: @bg-lighter;
+  padding: 12;
+  border-radius: 10;
+  placeholder: "Search app...";
+  placeholder-color: @bg-lighter;
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+listview {
+  columns: 1;
+  lines: 4;
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+prompt {
+  enabled: true;
+  padding: 10 10 10 14;
+  background-color: @accent;
+  border-radius: 10;
+  margin: 0 5 0 0;
+  font: "JetBrainsMono NF Bold 20";
+}
