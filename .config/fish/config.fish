@@ -35,6 +35,7 @@ if status --is-interactive
   if type -q exa
     abbr --add --global ls 'exa -lB --no-time --group-directories-first --icons'
     abbr --add --global la 'exa -laB --no-time --group-directories-first --icons'
+    abbr --add --global tree 'exa --tree'
   end
   
   if type -q bat
