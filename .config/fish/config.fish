@@ -45,5 +45,8 @@ if status --is-interactive
   if type -q rg
     abbr --add --global grep 'rg'
   end
+
+  abbr --add --global odin '~/Programs/Odin/odin'
+
 end
 
