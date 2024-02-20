@@ -45,8 +45,14 @@ if status --is-interactive
   if type -q rg
     abbr --add --global grep 'rg'
   end
+  
+  if test -f ~/Programs/Odin/odin
+    abbr --add --global odin '~/Programs/Odin/odin'
+  end
 
-  abbr --add --global odin '~/Programs/Odin/odin'
-
+  if test -f ~/.bun/bin/bun
+    abbr --add --global bun '~/.bun/bin/bun'
+    abbr --add --global bunx '~/.bun/bin/bunx'
+  end
 end
 
