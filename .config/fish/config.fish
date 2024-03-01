@@ -54,5 +54,9 @@ if status --is-interactive
     abbr --add --global bun '~/.bun/bin/bun'
     abbr --add --global bunx '~/.bun/bin/bunx'
   end
+
+  if test -f ~/go/bin/air
+    abbr --add --global air '~/go/bin/air'
+  end
 end
 
