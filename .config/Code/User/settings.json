@@ -1,0 +1,269 @@
+{
+  "keyboard.dispatch": "keyCode", // Make the <CapsLock> work as <Esc> work
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontSize": 16,
+  "editor.fontFamily": "'JetBrainsMono NF', 'Droid Sans Mono', 'monospace', monospace",
+  "editor.formatOnSave": true,
+  "vim.enableNeovim": false,
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "vim.useSystemClipboard": true,
+  "vim.easymotion": true,
+  "vim.leader": "<space>",
+  "vim.useCtrlKeys": true,
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-s>": false,
+    "<C-z>": false,
+    "<C-f>": false,
+    "<C-a>": false,
+    "<C-k>": true,
+    "<C-p>": false,
+    "<C-t>": false,
+    "<C-o>": false
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Dealing with wrap
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    },
+    // Rename symbol
+    {
+      "before": ["<leader>", "r"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.rename"
+        }
+      ]
+    },
+    // Fuzzy find
+    {
+      "before": ["<leader>", "f"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.quickOpen"
+        }
+      ]
+    },
+    // Split editors
+    {
+      "before": ["<leader>", "v"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.splitEditor"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.focusNextGroup"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.focusPreviousGroup"
+        }
+      ]
+    },
+    // Open tabs
+    {
+      "before": ["<leader>", "1"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex1"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "2"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex2"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "3"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex3"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "4"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex4"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "5"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex5"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "6"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex6"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "7"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex7"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "8"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex8"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "9"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.openEditorAtIndex9"
+        }
+      ]
+    },
+    // Toggle visibility
+    {
+      "before": ["<leader>", "e"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.toggleSidebarVisibility"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "E"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.toggleActivityBarVisibility"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "b"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.toggleStatusbarVisibility"
+        }
+      ]
+    },
+    // Close window
+    {
+      "before": ["<leader>", "q"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.closeActiveEditor"
+        }
+      ]
+    },
+    // Hover
+    {
+      "before": ["K"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.showHover"
+        }
+      ]
+    }
+  ],
+  "[latex]": {
+    "editor.formatOnPaste": false,
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.wordWrap": "on"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[c]": {
+    "editor.tabSize": 4
+  },
+  "[cpp]": {
+    "editor.tabSize": 4
+  },
+  "editor.minimap.enabled": false,
+  "[python]": {
+    "vim.textwidth": 72,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.menuBarVisibility": "toggle",
+  "python.analysis.typeCheckingMode": "strict",
+  "breadcrumbs.enabled": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.highlightActiveBracketPair": false,
+  "zig.zls.path": "/usr/local/bin/zls",
+  "workbench.colorTheme": "Visual Studio Dark - C++",
+  "zig.zigPath": "/usr/local/bin/zig",
+  "editor.guides.bracketPairsHorizontal": false,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "right"
+  },
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "sameLine",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "sameLine",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "sameLine",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
+  "zig.initialSetupDone": true,
+  "C_Cpp.formatting": "clangFormat",
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 10,
+  "window.zoomLevel": 1,
+  "zig.path": "/usr/local/bin/zig",
+  "zig.zls.enableInlayHints": false,
+  "workbench.statusBar.visible": false
+}
