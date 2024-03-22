@@ -45,6 +45,10 @@ if status --is-interactive
   if type -q rg
     abbr --add --global grep 'rg'
   end
+
+  if type -q code; and test -n "$WAYLAND_DISPLAY"
+    abbr --add --global code 'code --enable-features=UseOzonePlatform --ozone-platform=wayland'
+  end
   
   if test -f ~/Programs/Odin/odin
     abbr --add --global odin '~/Programs/Odin/odin'
