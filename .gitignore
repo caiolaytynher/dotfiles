@@ -1,1 +1,11 @@
+# vscode
+globalStorage/
+History/
+snippets/
+workspaceStorage/
+
+# fish
+completions/
+conf.d/
+functions/
 fish_variables
