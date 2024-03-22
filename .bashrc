@@ -5,8 +5,8 @@
 set -o vi
 
 if command -v exa >/dev/null 2>&1; then
-	alias ls='exa -lB --no-time --group-directories-first --icons'
-	alias la='exa -laB --no-time --group-directories-first --icons'
+	alias ls='exa -lb --no-time --group-directories-first --icons --git --header'
+	alias la='exa -lab --no-time --group-directories-first --icons --git --header'
 	alias tree='exa --tree'
 fi
 

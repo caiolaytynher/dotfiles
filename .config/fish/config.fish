@@ -33,8 +33,8 @@ if status --is-interactive
   end
 
   if type -q exa
-    abbr --add --global ls 'exa -lB --no-time --group-directories-first --icons'
-    abbr --add --global la 'exa -laB --no-time --group-directories-first --icons'
+    abbr --add --global ls 'exa -lb --no-time --group-directories-first --icons --git --header'
+    abbr --add --global la 'exa -lab --no-time --group-directories-first --icons --git --header'
     abbr --add --global tree 'exa --tree'
   end
   
