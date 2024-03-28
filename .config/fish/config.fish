@@ -45,7 +45,8 @@ if status --is-interactive
   if type -q rg
     abbr --add --global grep 'rg'
   end
-
+  
+  # Make vscode run with wayland
   if type -q code; and test -n "$WAYLAND_DISPLAY"
     abbr --add --global code 'code --enable-features=UseOzonePlatform --ozone-platform=wayland'
   end
