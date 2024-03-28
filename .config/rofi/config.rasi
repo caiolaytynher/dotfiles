@@ -4,6 +4,9 @@ configuration {
   font: "JetBrainsMono NF Bold 15";
   modi: "run,drun";
   show-icons: true;
+  hover-select: true;
+  me-select-entry: "";
+  me-accept-entry: [ MousePrimary, MouseSecondary, MouseDPrimary ];
 }
 
 @theme "/dev/null"
