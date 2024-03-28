@@ -63,5 +63,9 @@ if status --is-interactive
   if test -f ~/go/bin/air
     abbr --add --global air '~/go/bin/air'
   end
+
+  if test -f ~/.pyenv/bin/pyenv
+    abbr --add --global pyenv '~/.pyenv/bin/pyenv'
+  end
 end
 
