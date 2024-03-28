@@ -836,3 +836,18 @@ require('lazy').setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- Clipboard was not working in wayland, so I tryied this code that I found at https://github.com/neovim/neovim/issues/25466 and it works
+if vim.env.WAYLAND_DISPLAY and vim.fn.executable 'wl-copy' and vim.fn.executable 'wl-paste' then
+  vim.g.clipboard = {
+    name = 'wl-copy',
+    copy = {
+      ['+'] = { 'wl-copy', '--type', 'text/plain' },
+      ['-'] = { 'wl-copy', '--primary', '--type', 'text/plain' },
+    },
+    paste = {
+      ['+'] = { 'wl-paste', '--no-newline' },
+      ['-'] = { 'wl-paste', '--no-newline', '--primary' },
+    },
+  }
+end
