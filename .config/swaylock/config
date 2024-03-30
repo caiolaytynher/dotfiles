@@ -1,0 +1,62 @@
+# NOTE: In current state, this config is not dynamic, i.e. if anything in my
+# desktop changes, this stays the same. Also, everything in this config came
+# from the man page.
+
+# Really should be the default behaviour
+ignore-empty-password
+
+image=~/Pictures/wallpapers/sebastian-luca-flooded-cathedral.jpg
+
+font="Roboto"
+font-size=100
+
+# Just to be sure. I normally have my caps lock disabled, so I
+# didn't bother to configure the behavior for caps lock active in
+# the rest of the config.
+indicator-caps-lock
+
+# Keep the ring visible
+indicator-idle-visible
+
+# Expand the ring
+indicator-radius=150
+indicator-thickness=15
+
+# Inside color of the ring. I tried to maintain the original color
+# scheme.
+# grey
+inside-color=#222222aa
+# orangish grey
+inside-clear-color=#773322aa
+# blueish grey
+inside-ver-color=#222277aa
+# reddish grey
+inside-wrong-color=#772222aa
+
+# Color of highlight when typing.
+# light grey
+key-hl-color=#999999
+# orangish light grey
+bs-hl-color=#cc8877
+
+# I've essentially disabled it by doing white with full transparency. Could be
+# any color, I've just chosen white.
+line-color=#ffffff00
+line-clear-color=#ffffff00
+line-ver-color=#ffffff00
+line-wrong-color=#ffffff00
+
+# Kept the same ring color for all states
+ring-color=#ffffff
+ring-clear-color=#ffffff
+ring-ver-color=#ffffff
+ring-wrong-color=#ffffff
+
+# Disabled the separator
+separator-color=#ffffff00
+
+# Kept all the text white
+text-color=#ffffff
+text-clear-color=#ffffff
+text-ver-color=#ffffff
+text-wrong-color=#ffffff
