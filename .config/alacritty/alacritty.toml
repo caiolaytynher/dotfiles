@@ -48,15 +48,7 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 [font]
 size = 14
 
-[font.bold]
-family = "JetBrainsMono NF"
-
-[font.bold_italic]
-family = "JetBrainsMono NF"
-
-[font.italic]
-family = "JetBrainsMono NF"
-
+# There's no fallback font option, I much prefer using FontAwesome for icons
 [font.normal]
 family = "JetBrainsMono NF"
 
