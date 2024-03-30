@@ -1,7 +1,7 @@
 configuration {
   display-drun: " ";
   drun-display-format: "{icon} {name}";
-  font: "JetBrainsMono NF Bold 15";
+  font: "FontAwesome, Roboto 15";
   modi: "run,drun";
   show-icons: true;
   hover-select: true;
