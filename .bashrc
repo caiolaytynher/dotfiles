@@ -26,11 +26,6 @@ if command -v zoxide >/dev/null 2>&1; then
 	eval "$(zoxide init --cmd cd bash)"
 fi
 
-if [ command -v code >/dev/null 2>&1 ] || [ -n "$WAYLAND_DISPLAY" ]; then
-	echo "vscode on wayland"
-	alias code='code --enable-features=UseOzonePlatform --ozone-platform=wayland'
-fi
-
 # pyenv setup
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
