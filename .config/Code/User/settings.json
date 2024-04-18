@@ -265,5 +265,13 @@
   "window.zoomLevel": 1,
   "zig.path": "/usr/local/bin/zig",
   "zig.zls.enableInlayHints": false,
-  "workbench.statusBar.visible": false
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
