@@ -47,23 +47,30 @@
     }
   },
   "widgets": [
-    "inhibitors",
     "title",
+    "buttons-grid",
     "dnd",
     "volume",
     "backlight",
     "notifications"
   ],
   "widget-config": {
-    "inhibitors": {
-      "text": "Inhibitors",
-      "button-text": "Clear All",
-      "clear-all-button": true
-    },
     "title": {
       "text": "Notifications",
       "clear-all-button": true,
       "button-text": "Clear All"
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "直",
+          "command": "~/.config/rofi/rofi-wifi-menu.sh"
+        },
+        {
+          "label": "",
+          "command": "~/.config/rofi/rofi-bluetooth"
+        }
+      ]
     },
     "dnd": {
       "text": "Do Not Disturb"
@@ -77,11 +84,11 @@
       "image-radius": 12
     },
     "volume": {
-      "label": "󰕾 ",
+      "label": "󰕾",
       "show-per-app": true
     },
     "backlight": {
-      "label": "󰃟 ",
+      "label": "󰃟",
       "device": "amdgpu_bl1"
     }
   }
