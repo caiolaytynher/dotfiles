@@ -2,4 +2,4 @@
 
 killall waybar
 
-~/Programs/Waybar/build/waybar &
+/usr/bin/waybar &
