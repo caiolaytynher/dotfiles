@@ -70,7 +70,7 @@
   "tray": {
     "icon-size": 20,
     "spacing": 10,
-    "show-passive-items": true
+    "show-passive-items": true,
   },
   "clock": {
     "format": "{:%d de %b, %H:%M}",
