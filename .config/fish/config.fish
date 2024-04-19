@@ -1,7 +1,7 @@
 # Disable fish welcome message
 set fish_greeting 
 
-# Disable virtual env prompt
+# Disable virtual env prompt (I use starship)
 set VIRTUAL_ENV_DISABLE_PROMPT "1" 
 
 # Set the environment variable depending on qtile existence
@@ -13,7 +13,7 @@ end
 if status --is-interactive
   # Commands to run in interactive sessions, i.e. connected to a keyboard
   # NOTE: type -q <command> checks the existence of that command
-  
+
   # Activate vim mode
   fish_vi_key_bindings
 
@@ -33,8 +33,8 @@ if status --is-interactive
   end
 
   if type -q exa
-    abbr --add --global ls 'exa -lb --no-time --group-directories-first --icons --git --header'
-    abbr --add --global la 'exa -lab --no-time --group-directories-first --icons --git --header'
+    abbr --add --global ls 'exa -lbh --no-time --group-directories-first --icons --git'
+    abbr --add --global la 'exa -labh --no-time --group-directories-first --icons --git'
     abbr --add --global tree 'exa --tree'
   end
   
@@ -45,12 +45,7 @@ if status --is-interactive
   if type -q rg
     abbr --add --global grep 'rg'
   end
-  
-  # Make vscode run with wayland
-  if type -q code; and test -n "$WAYLAND_DISPLAY"
-    abbr --add --global code 'code --enable-features=UseOzonePlatform --ozone-platform=wayland'
-  end
-  
+
   if test -f ~/Programs/Odin/odin
     abbr --add --global odin '~/Programs/Odin/odin'
   end
