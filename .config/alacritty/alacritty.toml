@@ -46,7 +46,7 @@ TERM = "xterm-256color"
 WINIT_X11_SCALE_FACTOR = "1.0"
 
 [font]
-size = 14
+size = 15
 
 # There's no fallback font option, I much prefer using FontAwesome for icons
 [font.normal]
