@@ -1,7 +1,6 @@
 {
   "keyboard.dispatch": "keyCode", // Make the <CapsLock> work as <Esc> work
   "workbench.iconTheme": "material-icon-theme",
-  "editor.fontSize": 16,
   "editor.fontFamily": "'JetBrainsMono NF', 'Droid Sans Mono', 'monospace', monospace",
   "editor.formatOnSave": true,
   "vim.enableNeovim": false,
@@ -228,7 +227,7 @@
   "[python]": {
     "vim.textwidth": 72,
     "editor.formatOnType": true,
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -273,5 +272,10 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
+  "cmake.showOptionsMovedNotification": false,
+  "go.toolsManagement.autoUpdate": true
 }
