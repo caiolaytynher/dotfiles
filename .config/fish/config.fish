@@ -17,6 +17,11 @@ if status --is-interactive
   # Activate vim mode
   fish_vi_key_bindings
 
+  if type -q python
+    abbr --add --global venv "python -m venv .venv"
+    abbr --add --global activate "source .venv/bin/activate.fish"
+  end
+
   if type -q nvim
     abbr --add --global vim 'nvim'
   end
@@ -46,9 +51,9 @@ if status --is-interactive
     abbr --add --global grep 'rg'
   end
 
-  if test -f ~/Programs/Odin/odin
-    abbr --add --global odin '~/Programs/Odin/odin'
-  end
+  # if test -f ~/Programs/Odin/odin
+  #   abbr --add --global odin '~/Programs/Odin/odin'
+  # end
 
   if test -f ~/.bun/bin/bun
     abbr --add --global bun '~/.bun/bin/bun'
@@ -62,5 +67,7 @@ if status --is-interactive
   if test -f ~/.pyenv/bin/pyenv
     abbr --add --global pyenv '~/.pyenv/bin/pyenv'
   end
+
+  abbr --add --global femm 'wine ~/.wine/drive_c/femm42/bin/femm.exe'
 end
 
