@@ -155,6 +155,8 @@ vim.opt.scrolloff = 10
 -- Disable wrap
 vim.opt.wrap = false
 
+-- vim.opt.tabstop = 4
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -963,6 +965,25 @@ require('lazy').setup {
 
       require('dapui').setup()
       require('nvim-dap-virtual-text').setup {}
+
+      dap.adapters.gdb = {
+        type = 'executable',
+        command = 'gdb',
+        args = { '-i', 'dap' },
+      }
+      dap.configurations.odin = {
+        {
+          name = 'Launch',
+          type = 'gdb',
+          request = 'launch',
+          -- program = function()
+          --   return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+          -- end,
+          program = vim.fn.getcwd() .. '/${workspaceFolderBasename}',
+          cwd = '${workspaceFolder}',
+          stopAtBeginningOfMainSubprogram = false,
+        },
+      }
 
       dap.adapters.cppdbg = {
         id = 'cppdbg',
